@@ -7,6 +7,10 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      INDEXNOW_KEY: 9efe89d2c7c4a1c43bc76b91f4634ec3
+      SITE_HOST: cashlytica.com
+      SITE_BASE: https://cashlytica.com
     steps:
       - uses: actions/checkout@v4
 
@@ -22,3 +26,6 @@ jobs:
             **/.git*
             **/.git*/**
             .github/**
+
+      - name: Notify IndexNow
+        run: python3 scripts/indexnow-submit.py
