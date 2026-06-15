@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Analytics -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Audit Bank Fees — Cashlytica</title>
+  <meta name="description" content="How to audit bank fees and identify overpayments in wires, service charges, analysis fees, and hidden fee codes." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://cashlytica.com/learn/bank-fee-audit/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://cashlytica.com/learn/bank-fee-audit/" />
+  <meta property="og:title" content="How to Audit Bank Fees — Cashlytica" />
+  <meta property="og:description" content="How to audit bank fees and identify overpayments in wires, service charges, analysis fees, and hidden fee codes." />
+  <meta property="og:site_name" content="Cashlytica" />
+  <meta property="og:image" content="https://cashlytica.com/og/learn-bank-fee-audit.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Audit Bank Fees — Cashlytica" />
+  <meta name="twitter:description" content="How to audit bank fees and identify overpayments in wires, service charges, analysis fees, and hidden fee codes." />
+  <meta name="twitter:image" content="https://cashlytica.com/og/learn-bank-fee-audit.svg" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-W1L7GJDSHX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -9,125 +24,64 @@
     gtag('js', new Date());
     gtag('config', 'G-W1L7GJDSHX');
   </script>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How to Audit Bank Fees: A Guide for Finance Teams — Cashlytica</title>
-  <meta name="description" content="Most mid-market companies overpay their banks by thousands of dollars annually. A bank fee audit identifies exactly where — typically in wire transfer fees, account service charges, and analysis fees." />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://cashlytica.com/learn/bank-fee-audit/" />
-  <meta property="og:title" content="How to Audit Bank Fees: A Guide for Finance Teams" />
-  <meta property="og:description" content="Most mid-market companies overpay their banks by thousands annually. Learn how to audit bank fees and identify wire fee, service charge, and analysis fee leakage." />
-  <meta property="og:site_name" content="Cashlytica" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "How to Audit Bank Fees: A Guide for Finance Teams",
-    "description": "Most mid-market companies overpay their banks by thousands of dollars annually. A bank fee audit identifies exactly where.",
-    "url": "https://cashlytica.com/learn/bank-fee-audit/",
-    "publisher": { "@type": "Organization", "name": "Cashlytica", "url": "https://cashlytica.com" }
-  }
-  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      theme: { extend: { colors: { brand: { 50:'#eef4fa', 100:'#dce7f3', 200:'#bfd1e4', 700:'#274b6b', 800:'#1d3a55', 900:'#12263b' } } } }
-    }
+    tailwind.config = { theme: { extend: { colors: { brand: { 50:'#eef4fa', 100:'#dce7f3', 200:'#bfd1e4', 700:'#274b6b', 800:'#1d3a55', 900:'#12263b' } } } } }
   </script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Audit Bank Fees", "description": "How to audit bank fees and identify overpayments in wires, service charges, analysis fees, and hidden fee codes.", "url": "https://cashlytica.com/learn/bank-fee-audit/", "publisher": {"@type": "Organization", "name": "Cashlytica", "url": "https://cashlytica.com"}, "author": {"@type": "Organization", "name": "Cashlytica"}}</script>
 </head>
 <body class="bg-slate-50 text-slate-900 min-h-screen">
 
-<header class="border-b border-slate-200 bg-white/80 backdrop-blur sticky top-0 z-10">
+<header class="sticky top-0 z-20 border-b border-slate-200 bg-white/80 backdrop-blur">
   <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
     <a href="/" class="flex items-center gap-3">
-      <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-sm font-black text-white shadow-sm">C</div>
+      <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-700 text-sm font-black text-white shadow-sm">C</div>
       <div>
         <p class="text-sm font-bold leading-none tracking-tight">Cashlytica</p>
         <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-400">Treasury intelligence</p>
       </div>
     </a>
-    <a href="https://app.cashlytica.com/login" class="inline-flex items-center rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold hover:border-brand-200 hover:bg-brand-50">Log in</a>
+    <nav class="hidden flex-wrap items-center gap-5 text-sm font-medium text-slate-500 lg:flex"><a href="/" class="hover:text-slate-900">Home</a><a href="/learn/" class="hover:text-slate-900">Learn</a><a href="/tools/" class="hover:text-slate-900">Tools</a><a href="/samples/" class="hover:text-slate-900">Samples</a><a href="/compare/" class="hover:text-slate-900">Compare</a><a href="/use-cases/" class="hover:text-slate-900">Use cases</a><a href="/for/" class="hover:text-slate-900">For</a><a href="/security/" class="hover:text-slate-900">Security</a><a href="/faq/" class="hover:text-slate-900">FAQ</a></nav>
+    <div class="flex items-center gap-2">
+      <a href="http://localhost:5173/login/" class="hidden rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold hover:border-brand-200 hover:bg-brand-50 sm:inline-flex">Log in</a>
+      <a href="http://localhost:5173/register/" class="inline-flex rounded-xl bg-brand-700 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-800">Get started</a>
+    </div>
   </div>
 </header>
 
-<main class="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:px-8">
-  <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700 mb-3">Cashlytica Learn</p>
-  <h1 class="text-4xl font-black tracking-tight">How to Audit Bank Fees: A Guide for Finance Teams</h1>
-  <p class="mt-4 text-lg leading-8 text-slate-600">Most mid-market companies overpay their banks by thousands of dollars annually. A bank fee audit identifies exactly where — typically in wire transfer fees, account service charges, and analysis fees.</p>
-
-  <section class="mt-10">
-    <h2 class="text-2xl font-bold">What is a bank fee audit?</h2>
-    <div class="mt-3 space-y-3 text-base leading-7 text-slate-600">
-      <p>A bank fee audit is a systematic review of your bank statements to identify fees that are above market rate, incorrectly applied, or duplicated. Banks charge dozens of individual fee lines — wire fees, ACH fees, account maintenance fees, lockbox fees, positive pay fees, and more — and most finance teams never review them line by line.</p>
-      <p>A proper audit compares your actual fees against published bank tariffs and industry benchmarks, then flags the lines where you're paying more than you should.</p>
-    </div>
-  </section>
-
-  <section class="mt-10">
-    <h2 class="text-2xl font-bold">The most common sources of bank fee leakage</h2>
-    <div class="mt-3 space-y-3 text-base leading-7 text-slate-600">
-      <ul class="list-disc pl-5 space-y-2">
-        <li><strong>Wire transfer fees above benchmark</strong> — domestic wires typically run $15–$25. Anything above $35 is worth questioning.</li>
-        <li><strong>Account analysis fee miscalculations</strong> — banks compute these monthly using an earnings credit rate (ECR). If your ECR is below the Fed funds rate, you're subsidizing the bank.</li>
-        <li><strong>Duplicate service charges</strong> — common after bank mergers or account restructurings where legacy fee codes persist.</li>
-        <li><strong>Dormant service fees</strong> — fees for services (positive pay, remote deposit capture) that the company stopped using but never deactivated.</li>
-        <li><strong>Negotiated rate drift</strong> — your contract locked in rates two years ago; the bank quietly increased them on non-contract lines.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="mt-10">
-    <h2 class="text-2xl font-bold">How to run a bank fee audit manually</h2>
-    <div class="mt-3 space-y-3 text-base leading-7 text-slate-600">
-      <p>To audit bank fees without a tool:</p>
-      <ol class="list-decimal pl-5 space-y-2 mt-2">
-        <li>Download 3–6 months of bank analysis statements (these are separate from your account statements).</li>
-        <li>Export each fee line into a spreadsheet: fee code, description, volume, unit rate, total.</li>
-        <li>Request your bank's current fee schedule and compare against your actual charges.</li>
-        <li>Flag any line where your rate exceeds the published rate or where volume appears inconsistent with your activity.</li>
-        <li>Request a credit or renegotiate the lines with the largest dollar variance.</li>
-      </ol>
-      <p>This process typically takes 4–8 hours for a company with 3–5 bank accounts.</p>
-    </div>
-  </section>
-
-  <section class="mt-10">
-    <h2 class="text-2xl font-bold">How Cashlytica automates the audit</h2>
-    <div class="mt-3 space-y-3 text-base leading-7 text-slate-600">
-      <p>Cashlytica's fee audit tool analyzes your bank statements automatically. Upload a redacted PDF or connect your bank directly, and the platform identifies fee lines above benchmark, flags duplicate patterns, and produces a dollar-value finding you can take directly into a bank renegotiation conversation.</p>
-      <p>The $99 one-time audit credits toward any Cashlytica subscription, so the cost is effectively zero if you continue to the platform.</p>
-    </div>
-  </section>
-
-  <div class="mt-16 rounded-[1.5rem] border border-brand-100 bg-brand-50 p-6">
-    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Find your bank fee leakage</p>
-    <h2 class="mt-2 text-2xl font-black tracking-tight">Run a $99 bank fee audit.</h2>
-    <p class="mt-2 text-sm leading-6 text-slate-600">Upload a redacted bank statement and Cashlytica identifies overpayments on wire fees, service charges, and analysis fees — with a specific dollar finding. Credit applies toward any subscription.</p>
-    <a href="https://app.cashlytica.com/billing" class="mt-4 inline-flex items-center gap-2 rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-800">
-      Start the audit <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
-    </a>
+<main class="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
+  <div class="inline-flex rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Cashlytica Learn</div>
+  <h1 class="mt-4 text-4xl font-black tracking-tight text-slate-900 sm:text-5xl">How to Audit Bank Fees</h1>
+  <div class="mt-4 space-y-4 text-lg leading-8 text-slate-600"><p>A bank fee audit is a structured review of bank statements and analysis statements to identify overpayments, duplicate charges, and rates that drift above market.</p><p>The goal is simple: find a dollar amount the CFO can defend, then use that finding to drive a negotiation or a subscription decision.</p></div>
+  <section class="mt-10"><h2 class="text-2xl font-bold tracking-tight text-slate-900">What the audit checks</h2><div class="mt-3 space-y-4 text-base leading-7 text-slate-600"><ul class="space-y-2 text-slate-600"><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Wire transfer fees above benchmark</span></li><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Account analysis and service charges</span></li><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Duplicate monthly fees after account changes</span></li><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Dormant services that were never shut off</span></li><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Rate drift after a contract renewal</span></li></ul></div></section><section class="mt-10"><h2 class="text-2xl font-bold tracking-tight text-slate-900">How Cashlytica helps</h2><div class="mt-3 space-y-4 text-base leading-7 text-slate-600"><ul class="space-y-2 text-slate-600"><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Groups fee lines and compares them to a benchmark baseline.</span></li><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Surfaces the biggest dollar deltas first.</span></li><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Turns the findings into a report the CFO can take to the bank.</span></li></ul></div></section>
+  <div class="mt-14 rounded-[1.5rem] border border-brand-100 bg-brand-50 p-6 sm:p-8">
+    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Start the audit</p>
+    <p class="mt-2 text-sm leading-6 text-slate-600">Run the $99 audit against your actual statements and see the findings in a simple report.</p>
+    <a href="http://localhost:5173/register/" class="mt-4 inline-flex items-center gap-2 rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-800">Run the $99 audit <span aria-hidden="true">→</span></a>
   </div>
-
-  <div class="mt-10 border-t border-slate-200 pt-8 flex flex-wrap gap-4 text-sm">
-    <a href="/learn/13-week-cash-forecast/" class="font-semibold text-brand-700 hover:text-brand-800 flex items-center gap-1">What is a 13-week cash forecast? <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></a>
-    <a href="/learn/treasury-management-software/" class="font-semibold text-brand-700 hover:text-brand-800 flex items-center gap-1">Treasury management software explained <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></a>
-  </div>
+  <div class="mt-8 border-t border-slate-200 pt-6 flex flex-wrap gap-4 text-sm"><a href="/learn/bank-analysis-statements/" class="font-semibold text-brand-700 hover:text-brand-800 flex items-center gap-1">Bank analysis statements <span aria-hidden="true">→</span></a><a href="/learn/how-to-negotiate-bank-fees/" class="font-semibold text-brand-700 hover:text-brand-800 flex items-center gap-1">How to negotiate bank fees <span aria-hidden="true">→</span></a><a href="/samples/bank-fee-audit-report/" class="font-semibold text-brand-700 hover:text-brand-800 flex items-center gap-1">Sample audit report <span aria-hidden="true">→</span></a></div>
 </main>
 
-<footer class="border-t border-slate-200 bg-white mt-16">
-  <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-6">
-    <p class="text-xs text-slate-400">© 2026 Cashlytica. Treasury intelligence for finance teams.</p>
-    <nav class="flex flex-wrap gap-5 text-xs font-medium text-slate-500">
-      <a href="/learn/13-week-cash-forecast/" class="hover:text-slate-900">13-Week Cash Forecast</a>
-      <a href="/learn/bank-fee-audit/" class="hover:text-slate-900">Bank Fee Audit Guide</a>
-      <a href="/learn/treasury-management-software/" class="hover:text-slate-900">Treasury Management Software</a>
-      <a href="https://app.cashlytica.com/login" class="hover:text-slate-900">Log in</a>
-      <a href="https://app.cashlytica.com/register" class="hover:text-slate-900">Get started</a>
-    </nav>
+<footer class="border-t border-slate-200 bg-white">
+  <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+    <div class="grid gap-8 md:grid-cols-4">
+      <div class="md:col-span-1">
+        <div class="flex items-center gap-3">
+          <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-700 text-sm font-black text-white shadow-sm">C</div>
+          <div>
+            <p class="text-sm font-bold leading-none tracking-tight">Cashlytica</p>
+            <p class="mt-1 text-xs uppercase tracking-[0.22em] text-slate-400">Treasury intelligence</p>
+          </div>
+        </div>
+        <p class="mt-4 max-w-sm text-sm leading-6 text-slate-500">Traffic, proof, and conversion for finance teams that need to find cash leakage, improve forecasts, and act on idle cash.</p>
+      </div>
+      <div><h3 class="text-sm font-semibold text-slate-900">Explore</h3><ul class="mt-3 space-y-2 text-sm text-slate-500"><li><a href="/" class="hover:text-slate-900">Home</a></li><li><a href="/learn/" class="hover:text-slate-900">Learn</a></li><li><a href="/tools/" class="hover:text-slate-900">Tools</a></li><li><a href="/samples/" class="hover:text-slate-900">Samples</a></li><li><a href="/compare/" class="hover:text-slate-900">Compare</a></li></ul></div><div><h3 class="text-sm font-semibold text-slate-900">Buyers</h3><ul class="mt-3 space-y-2 text-sm text-slate-500"><li><a href="/use-cases/" class="hover:text-slate-900">Use cases</a></li><li><a href="/for/cfos/" class="hover:text-slate-900">For CFOs</a></li><li><a href="/for/controllers/" class="hover:text-slate-900">For controllers</a></li><li><a href="/for/founders/" class="hover:text-slate-900">For founders</a></li></ul></div><div><h3 class="text-sm font-semibold text-slate-900">Trust</h3><ul class="mt-3 space-y-2 text-sm text-slate-500"><li><a href="/security/" class="hover:text-slate-900">Security</a></li><li><a href="/faq/" class="hover:text-slate-900">FAQ</a></li><li><a href="http://localhost:5173/register/" class="hover:text-slate-900">Get started</a></li><li><a href="http://localhost:5173/login/" class="hover:text-slate-900">Log in</a></li></ul></div>
+    </div>
+    <div class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-slate-200 pt-6 text-xs text-slate-400">
+      <p>© 2026 Cashlytica. Treasury intelligence for finance teams.</p>
+      <p>Public brand: Cashlytica.</p>
+    </div>
   </div>
 </footer>
-
 </body>
 </html>

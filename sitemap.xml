@@ -1,7 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://cashlytica.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://cashlytica.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://cashlytica.com/compare/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/compare/cashlytica-vs-kyriba/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/compare/cashlytica-vs-mercury/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/compare/cashlytica-vs-ramp/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/compare/cashlytica-vs-spreadsheets/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/compare/cashlytica-vs-trovata/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/faq/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/for/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/for/cfos/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/for/controllers/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/for/finance-teams/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/for/founders/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/for/mid-market-companies/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/learn/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://cashlytica.com/learn/13-week-cash-forecast/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/learn/bank-analysis-statements/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://cashlytica.com/learn/bank-fee-audit/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/learn/bank-reconciliation-automation/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/learn/best-treasury-software-for-mid-market-companies/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/learn/cash-forecast-accuracy/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/learn/cash-forecast-vs-cash-flow-statement/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/learn/cash-position-dashboard/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/learn/common-13-week-forecast-mistakes/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/learn/common-business-bank-fees/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/learn/corporate-cash-yield-benchmarks/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/learn/earnings-credit-rate/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/learn/how-much-cash-should-a-business-keep/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/learn/how-to-negotiate-bank-fees/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/learn/idle-cash-drag/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/learn/idle-cash/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/learn/money-market-funds-vs-treasury-bills-vs-sweep-accounts/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/learn/operating-cash-vs-reserve-cash/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/learn/treasury-automation-for-finance-teams/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/learn/treasury-kpis/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://cashlytica.com/learn/treasury-management-software/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/learn/weekly-cash-forecasting-for-cfos/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/learn/wire-transfer-fee-benchmarks/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/samples/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/samples/13-week-forecast/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/samples/bank-fee-audit-report/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/samples/board-briefing/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/samples/idle-cash-recommendation/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/security/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/templates/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/templates/13-week-cash-forecast/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/tools/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/tools/bank-fee-calculator/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/tools/idle-cash-calculator/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/use-cases/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/use-cases/13-week-cash-forecast/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/use-cases/bank-fee-audit/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/use-cases/board-reporting/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/use-cases/cash-position-dashboard/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/use-cases/cfo-treasury-advisor/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/use-cases/idle-cash-yield/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cashlytica.com/use-cases/reconciliation/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

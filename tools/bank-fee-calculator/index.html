@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bank Fee Calculator — Cashlytica</title>
+  <meta name="description" content="Estimate annual bank fee overpayment from wires, ACH, analysis fees, and service charges." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://cashlytica.com/tools/bank-fee-calculator/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cashlytica.com/tools/bank-fee-calculator/" />
+  <meta property="og:title" content="Bank Fee Calculator — Cashlytica" />
+  <meta property="og:description" content="Estimate annual bank fee overpayment from wires, ACH, analysis fees, and service charges." />
+  <meta property="og:site_name" content="Cashlytica" />
+  <meta property="og:image" content="https://cashlytica.com/og/tools-bank-fee-calculator.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bank Fee Calculator — Cashlytica" />
+  <meta name="twitter:description" content="Estimate annual bank fee overpayment from wires, ACH, analysis fees, and service charges." />
+  <meta name="twitter:image" content="https://cashlytica.com/og/tools-bank-fee-calculator.svg" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W1L7GJDSHX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-W1L7GJDSHX');
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { brand: { 50:'#eef4fa', 100:'#dce7f3', 200:'#bfd1e4', 700:'#274b6b', 800:'#1d3a55', 900:'#12263b' } } } } }
+  </script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Bank Fee Calculator", "description": "Estimate annual bank fee overpayment from wires, ACH, analysis fees, and service charges.", "url": "https://cashlytica.com/tools/bank-fee-calculator/", "publisher": {"@type": "Organization", "name": "Cashlytica", "url": "https://cashlytica.com"}}</script>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen">
+
+<header class="sticky top-0 z-20 border-b border-slate-200 bg-white/80 backdrop-blur">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+    <a href="/" class="flex items-center gap-3">
+      <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-700 text-sm font-black text-white shadow-sm">C</div>
+      <div>
+        <p class="text-sm font-bold leading-none tracking-tight">Cashlytica</p>
+        <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-400">Treasury intelligence</p>
+      </div>
+    </a>
+    <nav class="hidden flex-wrap items-center gap-5 text-sm font-medium text-slate-500 lg:flex"><a href="/" class="hover:text-slate-900">Home</a><a href="/learn/" class="hover:text-slate-900">Learn</a><a href="/tools/" class="hover:text-slate-900">Tools</a><a href="/samples/" class="hover:text-slate-900">Samples</a><a href="/compare/" class="hover:text-slate-900">Compare</a><a href="/use-cases/" class="hover:text-slate-900">Use cases</a><a href="/for/" class="hover:text-slate-900">For</a><a href="/security/" class="hover:text-slate-900">Security</a><a href="/faq/" class="hover:text-slate-900">FAQ</a></nav>
+    <div class="flex items-center gap-2">
+      <a href="http://localhost:5173/login/" class="hidden rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold hover:border-brand-200 hover:bg-brand-50 sm:inline-flex">Log in</a>
+      <a href="http://localhost:5173/register/" class="inline-flex rounded-xl bg-brand-700 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-800">Get started</a>
+    </div>
+  </div>
+</header>
+
+<main class="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
+  <div class="inline-flex rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Calculator</div>
+  <h1 class="mt-4 text-4xl font-black tracking-tight text-slate-900 sm:text-5xl">Bank Fee Calculator</h1>
+  <p class="mt-4 max-w-3xl text-lg leading-8 text-slate-600">Enter the monthly banking charges you see today. Cashlytica will estimate the annual overpayment and point you toward the audit.</p>
+  <div class="mt-10 rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
+<form class="grid gap-4 md:grid-cols-2">
+  <label class="block"><span class="text-sm font-semibold text-slate-700">Monthly wire fees</span><input id="wire" type="number" min="0" step="0.01" class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3" value="450"></label>
+  <label class="block"><span class="text-sm font-semibold text-slate-700">Monthly ACH fees</span><input id="ach" type="number" min="0" step="0.01" class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3" value="180"></label>
+  <label class="block"><span class="text-sm font-semibold text-slate-700">Monthly analysis fees</span><input id="analysis" type="number" min="0" step="0.01" class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3" value="350"></label>
+  <label class="block"><span class="text-sm font-semibold text-slate-700">Monthly service charges</span><input id="service" type="number" min="0" step="0.01" class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3" value="220"></label>
+  <label class="block md:col-span-2"><span class="text-sm font-semibold text-slate-700">Number of accounts</span><input id="accounts" type="number" min="1" step="1" class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3" value="6"></label>
+  <div class="md:col-span-2 flex flex-wrap gap-3">
+    <button type="button" onclick="calculate()" class="inline-flex items-center gap-2 rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-800">Calculate →</button>
+    <a href="http://localhost:5173/register/" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold hover:border-brand-200 hover:bg-brand-50">Run the audit →</a>
+  </div>
+</form>
+<div id="result" class="mt-6 rounded-2xl border border-brand-100 bg-brand-50 p-5">
+  <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Estimated annual overpayment</p>
+  <p id="annual" class="mt-2 text-4xl font-black tracking-tight text-slate-900">$0</p>
+  <p id="note" class="mt-2 text-sm leading-6 text-slate-600">Enter the monthly fees to estimate the annual total.</p>
+</div>
+<script>
+function money(n){ return n.toLocaleString(undefined, {maximumFractionDigits:0, minimumFractionDigits:0}); }
+function calculate(){
+  const wire = parseFloat(document.getElementById('wire').value || 0);
+  const ach = parseFloat(document.getElementById('ach').value || 0);
+  const analysis = parseFloat(document.getElementById('analysis').value || 0);
+  const service = parseFloat(document.getElementById('service').value || 0);
+  const accounts = parseInt(document.getElementById('accounts').value || 1, 10);
+  const monthly = wire + ach + analysis + service;
+  const annual = monthly * 12;
+  document.getElementById('annual').textContent = '$' + money(annual);
+  document.getElementById('note').textContent = `Based on $${money(monthly)} per month across ${accounts} account(s). Use this as a quick estimate, then verify with the actual statements.`;
+}
+calculate();
+</script></div>
+  <section class="mt-10"><h2 class="text-2xl font-bold tracking-tight text-slate-900">How the estimate works</h2><div class="mt-3 space-y-4 text-base leading-7 text-slate-600"><ul class="space-y-2 text-slate-600"><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>The calculator sums the monthly fee inputs.</span></li><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>It multiplies the monthly total by 12 to estimate the annual amount.</span></li><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>The account count gives context for the scope of the banking setup.</span></li></ul></div></section><section class="mt-10"><h2 class="text-2xl font-bold tracking-tight text-slate-900">What to do with the number</h2><div class="mt-3 space-y-4 text-base leading-7 text-slate-600"><ul class="space-y-2 text-slate-600"><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Treat the estimate as a conversation starter.</span></li><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Compare it to the actual statements.</span></li><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Use the audit to verify the number and find the biggest line items.</span></li></ul></div></section>
+  <div class="mt-14 rounded-[1.5rem] border border-brand-100 bg-brand-50 p-6 sm:p-8">
+    <h2 class="text-2xl font-black tracking-tight text-slate-900">Turn the estimate into a real finding</h2>
+    <p class="mt-2 text-sm leading-6 text-slate-600">The calculator should create enough curiosity that the buyer wants to see the actual report.</p>
+    <a href="http://localhost:5173/register/" class="mt-4 inline-flex items-center gap-2 rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-800">Run the $99 audit <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="mt-8 border-t border-slate-200 pt-6 flex flex-wrap gap-4 text-sm"><a href="/learn/bank-fee-audit/" class="font-semibold text-brand-700 hover:text-brand-800 flex items-center gap-1">Bank fee audit <span aria-hidden="true">→</span></a><a href="/learn/common-business-bank-fees/" class="font-semibold text-brand-700 hover:text-brand-800 flex items-center gap-1">Common bank fees <span aria-hidden="true">→</span></a><a href="/samples/bank-fee-audit-report/" class="font-semibold text-brand-700 hover:text-brand-800 flex items-center gap-1">Sample audit report <span aria-hidden="true">→</span></a></div>
+</main>
+
+<footer class="border-t border-slate-200 bg-white">
+  <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+    <div class="grid gap-8 md:grid-cols-4">
+      <div class="md:col-span-1">
+        <div class="flex items-center gap-3">
+          <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-700 text-sm font-black text-white shadow-sm">C</div>
+          <div>
+            <p class="text-sm font-bold leading-none tracking-tight">Cashlytica</p>
+            <p class="mt-1 text-xs uppercase tracking-[0.22em] text-slate-400">Treasury intelligence</p>
+          </div>
+        </div>
+        <p class="mt-4 max-w-sm text-sm leading-6 text-slate-500">Traffic, proof, and conversion for finance teams that need to find cash leakage, improve forecasts, and act on idle cash.</p>
+      </div>
+      <div><h3 class="text-sm font-semibold text-slate-900">Explore</h3><ul class="mt-3 space-y-2 text-sm text-slate-500"><li><a href="/" class="hover:text-slate-900">Home</a></li><li><a href="/learn/" class="hover:text-slate-900">Learn</a></li><li><a href="/tools/" class="hover:text-slate-900">Tools</a></li><li><a href="/samples/" class="hover:text-slate-900">Samples</a></li><li><a href="/compare/" class="hover:text-slate-900">Compare</a></li></ul></div><div><h3 class="text-sm font-semibold text-slate-900">Buyers</h3><ul class="mt-3 space-y-2 text-sm text-slate-500"><li><a href="/use-cases/" class="hover:text-slate-900">Use cases</a></li><li><a href="/for/cfos/" class="hover:text-slate-900">For CFOs</a></li><li><a href="/for/controllers/" class="hover:text-slate-900">For controllers</a></li><li><a href="/for/founders/" class="hover:text-slate-900">For founders</a></li></ul></div><div><h3 class="text-sm font-semibold text-slate-900">Trust</h3><ul class="mt-3 space-y-2 text-sm text-slate-500"><li><a href="/security/" class="hover:text-slate-900">Security</a></li><li><a href="/faq/" class="hover:text-slate-900">FAQ</a></li><li><a href="http://localhost:5173/register/" class="hover:text-slate-900">Get started</a></li><li><a href="http://localhost:5173/login/" class="hover:text-slate-900">Log in</a></li></ul></div>
+    </div>
+    <div class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-slate-200 pt-6 text-xs text-slate-400">
+      <p>© 2026 Cashlytica. Treasury intelligence for finance teams.</p>
+      <p>Public brand: Cashlytica.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
