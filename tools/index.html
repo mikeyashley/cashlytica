@@ -17,37 +17,12 @@
   <meta name="twitter:title" content="Cashlytica Tools — calculators that turn interest into intent" />
   <meta name="twitter:description" content="Simple calculators for bank fee overpayment and idle cash yield." />
   <meta name="twitter:image" content="https://cashlytica.com/og/tools.svg" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W1L7GJDSHX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('configG-W1L7GJDSHX');
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: { colors: { brand: { 50:'#eef4fa', 100:'#dce7f3', 200:'#bfd1e4', 700:'#274b6b', 800:'#1d3a55', 900:'#12263b' } } } } }
-  </script>
+  <!--#include virtual="/shared/head-assets.html" -->
   
 </head>
 <body class="bg-slate-50 text-slate-900 min-h-screen">
 
-<header class="sticky top-0 z-20 border-b border-slate-200 bg-white/80 backdrop-blur">
-  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-    <a href="/" class="flex items-center gap-3">
-      <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-700 text-sm font-black text-white shadow-sm">C</div>
-      <div>
-        <p class="text-sm font-bold leading-none tracking-tight">Cashlytica</p>
-        <p class="text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-400">Treasury intelligence</p>
-      </div>
-    </a>
-    <nav class="hidden flex-wrap items-center gap-5 text-sm font-medium text-slate-500 lg:flex"><a href="/" class="hover:text-slate-900">Home</a><a href="/learn/" class="hover:text-slate-900">Learn</a><a href="/tools/" class="hover:text-slate-900">Tools</a><a href="/samples/" class="hover:text-slate-900">Samples</a><a href="/compare/" class="hover:text-slate-900">Compare</a><a href="/use-cases/" class="hover:text-slate-900">Use cases</a><a href="/for/" class="hover:text-slate-900">For</a><a href="/security/" class="hover:text-slate-900">Security</a><a href="/faq/" class="hover:text-slate-900">FAQ</a></nav>
-    <div class="flex items-center gap-2">
-      <a href="http://localhost:5173/login/" class="hidden rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold hover:border-brand-200 hover:bg-brand-50 sm:inline-flex">Log in</a>
-      <a href="http://localhost:5173/register/" class="inline-flex rounded-xl bg-brand-700 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-800">Get started</a>
-    </div>
-  </div>
-</header>
+<!--#include virtual="/shared/header.html" -->
 
 <main class="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
   <div class="inline-flex rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Tools hub</div>
@@ -57,30 +32,10 @@
   <div class="mt-14 rounded-[1.5rem] border border-brand-100 bg-brand-50 p-6 sm:p-8">
     <h2 class="text-2xl font-black tracking-tight text-slate-900">Turn the estimate into a real finding</h2>
     <p class="mt-2 text-sm leading-6 text-slate-600">The calculator should create enough curiosity that the buyer wants to verify the number against real statements.</p>
-    <a href="http://localhost:5173/register/" class="mt-4 inline-flex items-center gap-2 rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-800">Run the audit <span aria-hidden="true">→</span></a>
+    <a href="{{APP_ORIGIN}}/register/" class="mt-4 inline-flex items-center gap-2 rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-800">Run the audit <span aria-hidden="true">→</span></a>
   </div>
 </main>
 
-<footer class="border-t border-slate-200 bg-white">
-  <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-    <div class="grid gap-8 md:grid-cols-4">
-      <div class="md:col-span-1">
-        <div class="flex items-center gap-3">
-          <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-700 text-sm font-black text-white shadow-sm">C</div>
-          <div>
-            <p class="text-sm font-bold leading-none tracking-tight">Cashlytica</p>
-            <p class="mt-1 text-xs uppercase tracking-[0.22em] text-slate-400">Treasury intelligence</p>
-          </div>
-        </div>
-        <p class="mt-4 max-w-sm text-sm leading-6 text-slate-500">Traffic, proof, and conversion for finance teams that need to find cash leakage, improve forecasts, and act on idle cash.</p>
-      </div>
-      <div><h3 class="text-sm font-semibold text-slate-900">Explore</h3><ul class="mt-3 space-y-2 text-sm text-slate-500"><li><a href="/" class="hover:text-slate-900">Home</a></li><li><a href="/learn/" class="hover:text-slate-900">Learn</a></li><li><a href="/tools/" class="hover:text-slate-900">Tools</a></li><li><a href="/samples/" class="hover:text-slate-900">Samples</a></li><li><a href="/compare/" class="hover:text-slate-900">Compare</a></li></ul></div><div><h3 class="text-sm font-semibold text-slate-900">Buyers</h3><ul class="mt-3 space-y-2 text-sm text-slate-500"><li><a href="/use-cases/" class="hover:text-slate-900">Use cases</a></li><li><a href="/for/cfos/" class="hover:text-slate-900">For CFOs</a></li><li><a href="/for/controllers/" class="hover:text-slate-900">For controllers</a></li><li><a href="/for/founders/" class="hover:text-slate-900">For founders</a></li></ul></div><div><h3 class="text-sm font-semibold text-slate-900">Trust</h3><ul class="mt-3 space-y-2 text-sm text-slate-500"><li><a href="/security/" class="hover:text-slate-900">Security</a></li><li><a href="/faq/" class="hover:text-slate-900">FAQ</a></li><li><a href="http://localhost:5173/register/" class="hover:text-slate-900">Get started</a></li><li><a href="http://localhost:5173/login/" class="hover:text-slate-900">Log in</a></li></ul></div>
-    </div>
-    <div class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-slate-200 pt-6 text-xs text-slate-400">
-      <p>© 2026 Cashlytica. Treasury intelligence for finance teams.</p>
-      <p>Public brand: Cashlytica.</p>
-    </div>
-  </div>
-</footer>
+<!--#include virtual="/shared/footer.html" -->
 </body>
 </html>

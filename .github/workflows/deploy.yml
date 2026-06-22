@@ -11,8 +11,12 @@ jobs:
       INDEXNOW_KEY: 9efe89d2c7c4a1c43bc76b91f4634ec3
       SITE_HOST: cashlytica.com
       SITE_BASE: https://cashlytica.com
+      CASHLYTICA_APP_ORIGIN: https://app.cashlytica.com
     steps:
       - uses: actions/checkout@v4
+
+      - name: Build site
+        run: python3 build.py "$RUNNER_TEMP/cashlytica-site"
 
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -20,12 +24,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./
+          local-dir: ${{ runner.temp }}/cashlytica-site/
           server-dir: /
-          exclude: |
-            **/.git*
-            **/.git*/**
-            .github/**
 
       - name: Notify IndexNow
         run: python3 scripts/indexnow-submit.py
