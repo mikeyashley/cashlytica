@@ -4,21 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cashlytica Security</title>
-  <meta name="description" content="How Cashlytica handles data, uploads, and customer isolation." />
+  <meta name="description" content="How Cashlytica handles data, uploads, access, and customer isolation." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://cashlytica.com/security/" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://cashlytica.com/security/" />
   <meta property="og:title" content="Cashlytica Security" />
-  <meta property="og:description" content="How Cashlytica handles data, uploads, and customer isolation." />
+  <meta property="og:description" content="How Cashlytica handles data, uploads, access, and customer isolation." />
   <meta property="og:site_name" content="Cashlytica" />
   <meta property="og:image" content="https://cashlytica.com/og/security.svg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Cashlytica Security" />
-  <meta name="twitter:description" content="How Cashlytica handles data, uploads, and customer isolation." />
+  <meta name="twitter:description" content="How Cashlytica handles data, uploads, access, and customer isolation." />
   <meta name="twitter:image" content="https://cashlytica.com/og/security.svg" />
   <!--#include virtual="/shared/head-assets.html" -->
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Security", "description": "How Cashlytica handles data, uploads, and customer isolation.", "url": "https://cashlytica.com/security/", "publisher": {"@type": "Organization", "name": "Cashlytica", "url": "https://cashlytica.com"}, "author": {"@type": "Organization", "name": "Cashlytica"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Cashlytica Security", "description": "How Cashlytica handles data, uploads, access, and customer isolation.", "url": "https://cashlytica.com/security/", "publisher": {"@type": "Organization", "name": "Cashlytica", "url": "https://cashlytica.com"}, "author": {"@type": "Organization", "name": "Cashlytica"}}</script>
 </head>
 <body class="bg-slate-50 text-slate-900 min-h-screen">
 
@@ -26,12 +26,48 @@
 
 <main class="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
   <div class="inline-flex rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Trust</div>
-  <h1 class="mt-4 text-4xl font-black tracking-tight text-slate-900 sm:text-5xl">Security</h1>
-  <div class="mt-4 space-y-4 text-lg leading-8 text-slate-600"><p>Finance buyers need to know how Cashlytica handles data, access, and uploads before they move forward.</p></div>
-  <section class="mt-10"><h2 class="text-2xl font-bold tracking-tight text-slate-900">What to expect</h2><div class="mt-3 space-y-4 text-base leading-7 text-slate-600"><ul class="space-y-2 text-slate-600"><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Use redacted uploads when possible.</span></li><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Keep the workflow focused on the minimum data needed to identify the issue.</span></li><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Cashlytica should be explicit about tenant isolation and encrypted handling.</span></li></ul></div></section><section class="mt-10"><h2 class="text-2xl font-bold tracking-tight text-slate-900">What the product is not</h2><div class="mt-3 space-y-4 text-base leading-7 text-slate-600"><ul class="space-y-2 text-slate-600"><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Cashlytica is software, not a bank or money transmitter.</span></li><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>It analyzes and recommends; it does not replace customer policy or approval.</span></li></ul></div></section>
+  <h1 class="mt-4 text-4xl font-black tracking-tight text-slate-900 sm:text-5xl">Security and data handling</h1>
+  <div class="mt-4 space-y-4 text-lg leading-8 text-slate-600"><p>Finance buyers should be able to see, in plain English, what happens to their data, how uploads are treated, and what Cashlytica is not before they share anything sensitive.</p></div>
+  <section class="mt-10">
+    <h2 class="text-2xl font-bold tracking-tight text-slate-900">What buyers should verify</h2>
+    <div class="mt-4 grid gap-4 md:grid-cols-3">
+      <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Minimum necessary data</p>
+        <p class="mt-2 text-sm leading-6 text-slate-600">The workflow should stay focused on the smallest set of records needed to find fee leakage, cash movement, or forecast issues.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Customer isolation</p>
+        <p class="mt-2 text-sm leading-6 text-slate-600">Buyers should expect clear tenant separation and a straightforward explanation of who can see what.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Product boundaries</p>
+        <p class="mt-2 text-sm leading-6 text-slate-600">The product analyzes and recommends. It is not a bank, not a money transmitter, and not a replacement for policy or approval.</p>
+      </div>
+    </div>
+  </section>
+  <section class="mt-10">
+    <h2 class="text-2xl font-bold tracking-tight text-slate-900">What to expect from uploads</h2>
+    <div class="mt-3 space-y-4 text-base leading-7 text-slate-600">
+      <ul class="space-y-2 text-slate-600">
+        <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Use redacted files when possible.</span></li>
+        <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Share only the records needed for the specific issue you want Cashlytica to solve.</span></li>
+        <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Expect the workflow to stay narrow enough that a buyer can understand the data path before they commit.</span></li>
+      </ul>
+    </div>
+  </section>
+  <section class="mt-10">
+    <h2 class="text-2xl font-bold tracking-tight text-slate-900">What the product is not</h2>
+    <div class="mt-3 space-y-4 text-base leading-7 text-slate-600">
+      <ul class="space-y-2 text-slate-600">
+        <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Cashlytica is software, not a bank or money transmitter.</span></li>
+        <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>It does not replace customer policy, approvals, or treasury judgment.</span></li>
+        <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>It should be evaluated as a decision-support layer, not a custody layer.</span></li>
+      </ul>
+    </div>
+  </section>
   <div class="mt-14 rounded-[1.5rem] border border-brand-100 bg-brand-50 p-6 sm:p-8">
     <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Use the product safely</p>
-    <p class="mt-2 text-sm leading-6 text-slate-600">The site should make the trust posture explicit enough that the buyer can move into the audit without guessing about the basics.</p>
+    <p class="mt-2 text-sm leading-6 text-slate-600">The trust story should give buyers enough clarity to proceed without guessing about the basics.</p>
     <a href="/faq/" class="mt-4 inline-flex items-center gap-2 rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-800">Read the FAQ <span aria-hidden="true">→</span></a>
   </div>
   <div class="mt-8 border-t border-slate-200 pt-6 flex flex-wrap gap-4 text-sm"><a href="/faq/" class="font-semibold text-brand-700 hover:text-brand-800 flex items-center gap-1">FAQ <span aria-hidden="true">→</span></a><a href="{{APP_ORIGIN}}/register/" class="font-semibold text-brand-700 hover:text-brand-800 flex items-center gap-1">Run the audit <span aria-hidden="true">→</span></a></div>
