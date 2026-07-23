@@ -43,11 +43,11 @@ What to do:
 - Remove or de-emphasize any copy that makes the page feel like a general app launcher.
 - Replace older ladder language in visible marketing copy with the buyer-facing ladder:
   - Free
-  - Fee Audit
-  - Advisor
+  - Analyst
+  - Manager
+  - Director
   - Treasurer
-  - Executor
-- Make sure `Connected` only appears, if needed, as an Advisor configuration in explanatory copy.
+- Make sure `Connected` only appears, if needed, as a Manager capability in explanatory copy.
 - Add a visible proof block with a specific sample number, such as `- $18,240 annual cash leakage found`.
 - Add one short section that explains the audit-to-advisor path in plain language.
 - Keep the page visually clean and institutionally styled.
@@ -224,7 +224,7 @@ Capture searchers who want short-term liquidity planning help.
 
 What to do:
 Create the following pages:
-- `/learn/13-week-cash-forecast-template/`
+- `/templates/13-week-cash-forecast/`
 - `/learn/cash-forecast-vs-cash-flow-statement/`
 - `/learn/cash-forecast-accuracy/`
 - `/learn/weekly-cash-forecasting-for-cfos/`
@@ -599,7 +599,7 @@ What to do:
   - Does Cashlytica move money?
   - How does the $99 audit work?
   - What happens if no savings are found?
-  - What is Advisor?
+  - What is Analyst?
   - Do I need live bank connections?
   - How does the audit credit work?
 - Use concise answers.
@@ -624,11 +624,11 @@ What to do:
 - Audit all pages for motion clarity.
 - Self-serve should be used for:
   - Free
-  - Fee Audit
-  - Advisor
+  - Analyst
+  - Manager
 - Sales-assisted should be used for:
+  - Director
   - Treasurer
-  - Executor
 - On pages for higher tiers, make the contact path explicit.
 - On self-serve pages, route to the audit, calculator, or register path.
 

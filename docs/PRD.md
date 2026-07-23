@@ -46,7 +46,7 @@ Use proof pages to build trust.
 
 Use the $99 audit as the conversion wedge.
 
-Use Advisor as the upsell after Cashlytica proves there is money to recover or cash to optimize.
+Use Analyst, Manager, Director, or Treasurer as the next operating level after Cashlytica proves there is money to recover or cash to optimize.
 
 ## 4. Homepage Requirements
 
@@ -84,14 +84,14 @@ Recommended structure:
    - Upload statements.
    - Cashlytica identifies fee leakage and idle cash.
    - You get a CFO-ready report.
-   - Upgrade to Advisor for ongoing monitoring and recommendations.
+   - Upgrade through Analyst, Manager, Director, or Treasurer for the capabilities the team needs.
 
 5. Product ladder
    - Free
-   - Fee Audit
-   - Advisor
+   - Analyst
+   - Manager
+   - Director
    - Treasurer
-   - Executor
 
 6. Sample outputs
    - Bank fee audit report.
@@ -113,10 +113,10 @@ Recommended structure:
 Use buyer-facing product language:
 
 - Free
-- Fee Audit
-- Advisor
+- Analyst
+- Manager
+- Director
 - Treasurer
-- Executor
 
 Avoid older or internal ladder language in primary marketing copy:
 
@@ -125,7 +125,7 @@ Avoid older or internal ladder language in primary marketing copy:
 - Optimize → Operate → Execute
 - TAS
 
-Connected can appear as an Advisor configuration when necessary, but not as a standalone buyer-facing rung.
+Connected can appear as a Manager capability when necessary, but not as a standalone buyer-facing rung.
 
 ## 5. Learn Hub
 
@@ -151,7 +151,7 @@ Pages to create or expand:
 Pages to create or expand:
 
 - `/learn/13-week-cash-forecast/`
-- `/learn/13-week-cash-forecast-template/`
+- `/templates/13-week-cash-forecast/`
 - `/learn/cash-forecast-vs-cash-flow-statement/`
 - `/learn/cash-forecast-accuracy/`
 - `/learn/weekly-cash-forecasting-for-cfos/`
@@ -370,7 +370,7 @@ Questions to cover:
 - Does Cashlytica move money?
 - How does the $99 audit work?
 - What happens if no savings are found?
-- What is Advisor?
+- What is Analyst?
 - Do I need live bank connections?
 - How does the audit credit work?
 
