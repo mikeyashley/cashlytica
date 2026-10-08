@@ -35,7 +35,7 @@
   <label class="block"><span class="text-sm font-semibold text-slate-700">Available yield (%)</span><input id="available" type="number" min="0" step="0.01" class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3" value="4.75"></label>
   <label class="block"><span class="text-sm font-semibold text-slate-700">Minimum operating buffer</span><input id="buffer" type="number" min="0" step="0.01" class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3" value="500000"></label>
   <div class="md:col-span-2 flex flex-wrap gap-3">
-    <button type="button" onclick="calculate()" class="inline-flex items-center gap-2 rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-800">Calculate →</button>
+    <button type="button" onclick="calculate(true)" class="inline-flex items-center gap-2 rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-800">Calculate →</button>
     <a href="{{APP_ORIGIN}}/register/" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold hover:border-brand-200 hover:bg-brand-50">Check idle cash in Cashlytica →</a>
   </div>
 </form>
@@ -46,7 +46,7 @@
 </div>
 <script>
 function money(n){ return n.toLocaleString(undefined, {maximumFractionDigits:0, minimumFractionDigits:0}); }
-function calculate(){
+function calculate(track){
   const balance = parseFloat(document.getElementById('balance').value || 0);
   const current = parseFloat(document.getElementById('current').value || 0);
   const available = parseFloat(document.getElementById('available').value || 0);
@@ -56,6 +56,9 @@ function calculate(){
   const annual = deployable * spread;
   document.getElementById('annual').textContent = '$' + money(annual);
   document.getElementById('note').textContent = `Based on ${balance.toLocaleString()} in cash, ${current}% current yield, ${available}% available yield, and a ${buffer.toLocaleString()} buffer.`;
+  if (track && typeof window.cashlyticaTrackEvent === 'function') {
+    window.cashlyticaTrackEvent('calculator_complete', { tool: 'idle-cash-calculator', annual_drag: Math.round(annual) });
+  }
 }
 calculate();
 </script></div>

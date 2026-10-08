@@ -44,4 +44,6 @@
     if (!form.matches('form')) return;
     send('form_submit', { form_name: form.id || form.className || 'form', page_location: window.location.pathname });
   }, { capture: true });
+
+  window.cashlyticaTrackEvent = send;
 })();
