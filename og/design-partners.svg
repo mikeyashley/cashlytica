@@ -9,8 +9,8 @@
   <rect width="1200" height="630" fill="url(#g)"/>
   <rect x="70" y="70" width="1060" height="490" rx="42" fill="#ffffff" opacity="0.08" stroke="#ffffff" stroke-opacity="0.14"/>
   <text x="108" y="155" fill="#dce7f3" font-size="30" font-family="Inter, Arial, sans-serif" letter-spacing="4">CASHLYTICA</text>
-  <text x="108" y="255" fill="#ffffff" font-size="66" font-weight="800" font-family="Inter, Arial, sans-serif">Cashlytica vs Ramp — Cashlytica</text>
-  <text x="108" y="330" fill="#dce7f3" font-size="34" font-family="Inter, Arial, sans-serif">Compare Cashlytica with Ramp when the buyer needs treasury outputs instead of spend management.</text>
+  <text x="108" y="255" fill="#ffffff" font-size="56" font-weight="800" font-family="Inter, Arial, sans-serif">Shape Cashlytica as a design partner</text>
+  <text x="108" y="330" fill="#dce7f3" font-size="34" font-family="Inter, Arial, sans-serif">Five finance teams. Free for up to six months.</text>
   <rect x="108" y="395" width="220" height="54" rx="27" fill="#dce7f3" opacity="0.96"/>
-  <text x="218" y="430" text-anchor="middle" fill="#12263b" font-size="24" font-weight="700" font-family="Inter, Arial, sans-serif">Cashlytica</text>
+  <text x="218" y="430" text-anchor="middle" fill="#12263b" font-size="24" font-weight="700" font-family="Inter, Arial, sans-serif">Design partners</text>
 </svg>

@@ -15,9 +15,16 @@
     var href = element.getAttribute('href') || '';
     var text = (element.getAttribute('data-analytics-label') || element.textContent || '').trim().slice(0, 100);
     var params = { link_text: text, link_url: href, page_location: window.location.pathname };
-    if (href.indexOf('mailto:') === 0) {
+    var isApplyEmail = href.indexOf('mailto:') === 0 && /design%20partner|design partner/i.test(href);
+    var isApplyLink = /^\/design-partners\/?(?:[?#]|$)/.test(href);
+    if (isApplyEmail || isApplyLink) {
+      send('design_partner_apply', Object.assign(params, {
+        source_page: window.location.pathname,
+        apply_step: isApplyEmail ? 'email' : 'cta'
+      }));
+    } else if (href.indexOf('mailto:') === 0) {
       send('email_contact_click', Object.assign(params, { method: 'email' }));
-    } else if (/\/register\b|register|audit/i.test(href + ' ' + text)) {
+    } else if (/\/register\/?(?:[?#]|$)/i.test(href)) {
       send('registration_start', params);
       send('cta_click', Object.assign(params, { cta_type: 'registration' }));
     } else if (/\/samples\//i.test(href) || /sample|report/i.test(text)) {

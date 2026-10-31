@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parent
 APP_ORIGIN = os.environ.get('CASHLYTICA_APP_ORIGIN', 'http://localhost:5173')
 INCLUDE_RE = re.compile(r'<!--#include\s+virtual=["\']([^"\']+)["\']\s*-->')
 PLACEHOLDER_RE = re.compile(r'\{\{APP_ORIGIN\}\}')
-SKIP_DIRS = {'.git', '.github', '__pycache__', 'scripts'}
+SKIP_DIRS = {'.git', '.github', '__pycache__', 'scripts', 'docs'}
 SKIP_FILES = {'build.py', 'serve.py', 'NORMS.md'}
 
 

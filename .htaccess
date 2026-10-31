@@ -1,0 +1,33 @@
+# Cashlytica web-root rules. build.py copies this file into the deploy tree.
+RewriteEngine On
+
+# Canonical host: www -> apex, over https
+RewriteCond %{HTTP_HOST} ^www\.cashlytica\.com$ [NC]
+RewriteRule ^(.*)$ https://cashlytica.com/$1 [R=301,L]
+
+# Internal docs and any markdown file are never public
+RewriteRule ^docs(/|$) - [F,L]
+RewriteRule \.md$ - [F,L]
+
+# Retired pages: 301 to the page that now covers them (with or without trailing slash or index.html).
+RewriteRule ^compare/cashlytica\-vs\-mercury/?(index\.html)?$ /compare/ [R=301,L]
+RewriteRule ^compare/cashlytica\-vs\-ramp/?(index\.html)?$ /compare/ [R=301,L]
+RewriteRule ^for/cfos/?(index\.html)?$ /for/ [R=301,L]
+RewriteRule ^for/controllers/?(index\.html)?$ /for/ [R=301,L]
+RewriteRule ^for/finance\-teams/?(index\.html)?$ /for/ [R=301,L]
+RewriteRule ^for/founders/?(index\.html)?$ /for/ [R=301,L]
+RewriteRule ^for/mid\-market\-companies/?(index\.html)?$ /learn/treasury-management-software/ [R=301,L]
+RewriteRule ^learn/best\-treasury\-software\-for\-mid\-market\-companies/?(index\.html)?$ /learn/treasury-management-software/ [R=301,L]
+RewriteRule ^learn/treasury\-automation\-for\-finance\-teams/?(index\.html)?$ /learn/treasury-management-software/ [R=301,L]
+RewriteRule ^learn/common\-13\-week\-forecast\-mistakes/?(index\.html)?$ /learn/13-week-cash-forecast/ [R=301,L]
+RewriteRule ^learn/weekly\-cash\-forecasting\-for\-cfos/?(index\.html)?$ /learn/13-week-cash-forecast/ [R=301,L]
+RewriteRule ^use\-cases/13\-week\-cash\-forecast/?(index\.html)?$ /learn/13-week-cash-forecast/ [R=301,L]
+RewriteRule ^learn/idle\-cash/?(index\.html)?$ /learn/idle-cash-drag/ [R=301,L]
+RewriteRule ^use\-cases/idle\-cash\-yield/?(index\.html)?$ /learn/idle-cash-drag/ [R=301,L]
+RewriteRule ^learn/operating\-cash\-vs\-reserve\-cash/?(index\.html)?$ /learn/how-much-cash-should-a-business-keep/ [R=301,L]
+RewriteRule ^use\-cases/cash\-position\-dashboard/?(index\.html)?$ /learn/cash-position-dashboard/ [R=301,L]
+RewriteRule ^use\-cases/reconciliation/?(index\.html)?$ /learn/bank-reconciliation-automation/ [R=301,L]
+RewriteRule ^use\-cases/board\-reporting/?(index\.html)?$ /samples/board-briefing/ [R=301,L]
+RewriteRule ^templates/?(index\.html)?$ /templates/13-week-cash-forecast/ [R=301,L]
+RewriteRule ^use\-cases/bank\-fee\-audit/?(index\.html)?$ /learn/bank-fee-audit/ [R=301,L]
+RewriteRule ^use\-cases/cfo\-treasury\-advisor/?(index\.html)?$ /design-partners/ [R=301,L]

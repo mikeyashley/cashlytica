@@ -4,21 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bank Fee Calculator — Cashlytica</title>
-  <meta name="description" content="Estimate annual bank fee overpayment from wires, ACH, analysis fees, and service charges." />
+  <meta name="description" content="Add up monthly wire, ACH, analysis and service fees to see what your banking costs a year." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://cashlytica.com/tools/bank-fee-calculator/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cashlytica.com/tools/bank-fee-calculator/" />
   <meta property="og:title" content="Bank Fee Calculator — Cashlytica" />
-  <meta property="og:description" content="Estimate annual bank fee overpayment from wires, ACH, analysis fees, and service charges." />
+  <meta property="og:description" content="Add up monthly wire, ACH, analysis and service fees to see what your banking costs a year." />
   <meta property="og:site_name" content="Cashlytica" />
   <meta property="og:image" content="https://cashlytica.com/og/tools-bank-fee-calculator.svg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Bank Fee Calculator — Cashlytica" />
-  <meta name="twitter:description" content="Estimate annual bank fee overpayment from wires, ACH, analysis fees, and service charges." />
+  <meta name="twitter:description" content="Add up monthly wire, ACH, analysis and service fees to see what your banking costs a year." />
   <meta name="twitter:image" content="https://cashlytica.com/og/tools-bank-fee-calculator.svg" />
   <!--#include virtual="/shared/head-assets.html" -->
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Bank Fee Calculator", "description": "Estimate annual bank fee overpayment from wires, ACH, analysis fees, and service charges.", "url": "https://cashlytica.com/tools/bank-fee-calculator/", "publisher": {"@type": "Organization", "name": "Cashlytica", "url": "https://cashlytica.com"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Bank Fee Calculator", "description": "Add up monthly wire, ACH, analysis and service fees to see what your banking costs a year.", "url": "https://cashlytica.com/tools/bank-fee-calculator/", "publisher": {"@type": "Organization", "name": "Cashlytica", "url": "https://cashlytica.com"}}</script>
 </head>
 <body class="bg-slate-50 text-slate-900 min-h-screen">
 
@@ -27,7 +27,7 @@
 <main class="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8">
   <div class="inline-flex rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Calculator</div>
   <h1 class="mt-4 text-4xl font-black tracking-tight text-slate-900 sm:text-5xl">Bank Fee Calculator</h1>
-  <p class="mt-4 max-w-3xl text-lg leading-8 text-slate-600">Enter the monthly banking charges you see today. Cashlytica will estimate the annual overpayment and point you toward the audit.</p>
+  <p class="mt-4 max-w-3xl text-lg leading-8 text-slate-600">Enter the monthly banking charges you see today. The calculator multiplies the monthly total by 12 to show your annual fees. It does not say how much of that is an overcharge; the bank fee review compares each line with a benchmark.</p>
   <div class="mt-10 rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
 <form class="grid gap-4 md:grid-cols-2">
   <label class="block"><span class="text-sm font-semibold text-slate-700">Monthly wire fees</span><input id="wire" type="number" min="0" step="0.01" class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3" value="450"></label>
@@ -37,13 +37,13 @@
   <label class="block md:col-span-2"><span class="text-sm font-semibold text-slate-700">Number of accounts</span><input id="accounts" type="number" min="1" step="1" class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3" value="6"></label>
   <div class="md:col-span-2 flex flex-wrap gap-3">
     <button type="button" onclick="calculate(true)" class="inline-flex items-center gap-2 rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-800">Calculate →</button>
-    <a href="{{APP_ORIGIN}}/register/" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold hover:border-brand-200 hover:bg-brand-50">Run the audit →</a>
+    <a href="/design-partners/" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold hover:border-brand-200 hover:bg-brand-50">Apply to be a design partner →</a>
   </div>
 </form>
 <div id="result" class="mt-6 rounded-2xl border border-brand-100 bg-brand-50 p-5">
-  <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Estimated annual overpayment</p>
+  <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">Annual bank fees at this rate</p>
   <p id="annual" class="mt-2 text-4xl font-black tracking-tight text-slate-900">$0</p>
-  <p id="note" class="mt-2 text-sm leading-6 text-slate-600">Enter the monthly fees to estimate the annual total.</p>
+  <p id="note" class="mt-2 text-sm leading-6 text-slate-600">Enter the monthly fees to see the annual total.</p>
 </div>
 <script>
 function money(n){ return n.toLocaleString(undefined, {maximumFractionDigits:0, minimumFractionDigits:0}); }
@@ -56,18 +56,18 @@ function calculate(track){
   const monthly = wire + ach + analysis + service;
   const annual = monthly * 12;
   document.getElementById('annual').textContent = '$' + money(annual);
-  document.getElementById('note').textContent = `Based on $${money(monthly)} per month across ${accounts} account(s). Use this as a quick estimate, then verify with the actual statements.`;
+  document.getElementById('note').textContent = `Based on $${money(monthly)} per month across ${accounts} account(s). This is monthly fees × 12, not an overpayment. Check it against your actual statements.`;
   if (track && typeof window.cashlyticaTrackEvent === 'function') {
     window.cashlyticaTrackEvent('calculator_complete', { tool: 'bank-fee-calculator', annual_fees: Math.round(annual) });
   }
 }
 calculate();
 </script></div>
-  <section class="mt-10"><h2 class="text-2xl font-bold tracking-tight text-slate-900">How the estimate works</h2><div class="mt-3 space-y-4 text-base leading-7 text-slate-600"><ul class="space-y-2 text-slate-600"><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>The calculator sums the monthly fee inputs.</span></li><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>It multiplies the monthly total by 12 to estimate the annual amount.</span></li><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>The account count gives context for the scope of the banking setup.</span></li></ul></div></section><section class="mt-10"><h2 class="text-2xl font-bold tracking-tight text-slate-900">What to do with the number</h2><div class="mt-3 space-y-4 text-base leading-7 text-slate-600"><ul class="space-y-2 text-slate-600"><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Treat the estimate as a conversation starter.</span></li><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Compare it to the actual statements.</span></li><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Use the audit to verify the number and find the biggest line items.</span></li></ul></div></section>
+  <section class="mt-10"><h2 class="text-2xl font-bold tracking-tight text-slate-900">How the estimate works</h2><div class="mt-3 space-y-4 text-base leading-7 text-slate-600"><ul class="space-y-2 text-slate-600"><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>The calculator sums the monthly fee inputs.</span></li><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>It multiplies the monthly total by 12 to give the annual amount (monthly fees × 12).</span></li><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>The account count gives context for the scope of the banking setup.</span></li></ul></div></section><section class="mt-10"><h2 class="text-2xl font-bold tracking-tight text-slate-900">What to do with the number</h2><div class="mt-3 space-y-4 text-base leading-7 text-slate-600"><ul class="space-y-2 text-slate-600"><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Treat the total as a starting point, not a finding.</span></li><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Compare it to the actual statements.</span></li><li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-brand-700 shrink-0"></span><span>Use the bank fee review to check the total and find the biggest line items.</span></li></ul></div></section>
   <div class="mt-14 rounded-[1.5rem] border border-brand-100 bg-brand-50 p-6 sm:p-8">
-    <h2 class="text-2xl font-black tracking-tight text-slate-900">Turn the estimate into a real finding</h2>
-    <p class="mt-2 text-sm leading-6 text-slate-600">The calculator should create enough curiosity that the buyer wants to see the actual report.</p>
-    <a href="{{APP_ORIGIN}}/register/" class="mt-4 inline-flex items-center gap-2 rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-800">Run the $99 audit <span aria-hidden="true">→</span></a>
+    <h2 class="text-2xl font-black tracking-tight text-slate-900">Turn the total into a real finding</h2>
+    <p class="mt-2 text-sm leading-6 text-slate-600">Design partners run the bank fee review on their real statements to see which lines are above a benchmark.</p>
+    <a href="/design-partners/" class="mt-4 inline-flex items-center gap-2 rounded-xl bg-brand-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-800">Apply to be a design partner <span aria-hidden="true">→</span></a>
   </div>
   <div class="mt-8 border-t border-slate-200 pt-6 flex flex-wrap gap-4 text-sm"><a href="/learn/bank-fee-audit/" class="font-semibold text-brand-700 hover:text-brand-800 flex items-center gap-1">Bank fee audit <span aria-hidden="true">→</span></a><a href="/learn/common-business-bank-fees/" class="font-semibold text-brand-700 hover:text-brand-800 flex items-center gap-1">Common bank fees <span aria-hidden="true">→</span></a><a href="/samples/bank-fee-audit-report/" class="font-semibold text-brand-700 hover:text-brand-800 flex items-center gap-1">Sample audit report <span aria-hidden="true">→</span></a></div>
 </main>
