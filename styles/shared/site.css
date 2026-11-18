@@ -1,9 +1,35 @@
+/* Richard app palette and native typography. */
+:root {
+  --ink: #1a1c20;
+  --ink-soft: #3a3d44;
+  --paper: #faf8f5;
+  --card: #ffffff;
+  --line: #eae6df;
+  --line-soft: #f1ede7;
+  --muted: #66635b;
+  --muted-2: #6b6a66;
+  --green: #1f6b57;
+  --green-soft: #e8f0ec;
+  --red: #b23b3b;
+  --red-soft: #f7ebeb;
+  --amber: #9a6a1a;
+  --amber-soft: #fbf5e9;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+}
+
 html { scroll-behavior: smooth; }
 
 body {
+  font-family: var(--sans);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
+
+/* Keep the app's 400/500/600 weight scale despite existing Tailwind classes. */
+.font-bold, .font-extrabold, .font-black { font-weight: 600 !important; }
+h1 { font-family: var(--serif); }
+h1.font-bold, h1.font-extrabold, h1.font-black { font-weight: 400 !important; }
 
 a {
   text-underline-offset: 0.16em;
@@ -15,5 +41,5 @@ img {
 }
 
 ::selection {
-  background: rgba(39, 75, 107, 0.14);
+  background: rgba(31, 107, 87, 0.18);
 }
